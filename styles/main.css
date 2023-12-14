@@ -26,3 +26,11 @@ body {
   display: flex;
   gap: 10px;
 }
+
+.crossed {
+  text-decoration: line-through;
+}
+
+.ul {
+  list-style: none;
+}
