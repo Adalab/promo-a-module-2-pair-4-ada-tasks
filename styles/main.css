@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+#task-form,
+#filter-form {
+  margin-bottom: 20px;
+}
+
+#task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
