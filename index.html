@@ -14,14 +14,14 @@
     <h1>Gestor de Tareas</h1>
 
     <!-- Formulario para agregar tareas -->
-    <form id="task-form">
+    <form id="task-form" class="js_form">
         <label for="task">Nueva Tarea:</label>
-        <input type="text" id="task" name="task" required>
-        <button type="submit">Agregar Tarea</button>
+        <input class="js_input" type="text" id="task" name="task" required>
+        <button type="submit" class="js_btnAdd">Agregar Tarea</button>
     </form>
 
     <!-- Formulario para filtrar tareas -->
-    <form id="filter-form">
+    <form id="filter-form" class="js_form">
         <label for="filter">Filtrar Tareas:</label>
         <select id="filter" name="filter">
             <option value="all">Todas</option>
@@ -33,7 +33,7 @@
 
     <!-- Lista de tareas -->
     <ul class="ul" id="task-list">
-        <li class="js__li"><input class="js__checkbox" type="checkbox">Mirar al infinito</input></li>
+        <li class="js__li"></li>
     </ul>
 
     <script src="./js/main.js"></script>
