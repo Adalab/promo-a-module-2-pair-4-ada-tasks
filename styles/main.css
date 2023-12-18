@@ -26,12 +26,12 @@ body {
   display: flex;
   gap: 10px;
 }
-/* 
-.completed {
+
+/* li.completed {
   text-decoration: line-through;
 } */
 
-li.completed {
+.completed {
   text-decoration: line-through;
 }
 

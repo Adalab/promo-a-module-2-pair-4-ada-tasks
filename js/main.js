@@ -3,6 +3,7 @@ const list = document.querySelector(".js__li");
 const btnAdd = document.querySelector(".js_btnAdd");
 const form = document.querySelector(".js_form");
 const input = document.querySelector(".js_input");
+let listTasks = [];
 
 // ARRAY DE TAREAS
 
@@ -35,12 +36,14 @@ btnAdd.addEventListener("click", (event) => {
   renderList(newTask);
 });
 
-// function toggleCrossed() {
-//   list.classList.toggle("completed");
-// }
+function toggleCrossed(event) {
+  const idTask = parseInt(event.target.id);
+  const indexTask = listTasks.findIndex((task) => task.id === idTask);
+  listTasks[indexTask].completed = !listTasks[indexTask].completed;
+  renderList(listTasks);
+}
 
-// checkBox.addEventListener("click", toggleCrossed);
-// console.log(toggleCrossed);
+list.addEventListener("click", toggleCrossed);
 
 //LO QUE APARECE AL CARGAR LA PÁGINA
 
