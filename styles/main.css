@@ -31,14 +31,6 @@ body {
   list-style: none;
 }
 
-/* li.completed {
+.crossed {
   text-decoration: line-through;
-} */
-
-.completed {
-  text-decoration: line-through;
-}
-
-.ul {
-  list-style: none;
 }
