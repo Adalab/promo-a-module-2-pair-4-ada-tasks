@@ -16,11 +16,6 @@ const tasks = [
   },
 ];
 
-//FUNCIÓN PINTAR TODAS LAS TAREAS
-// ... (tu código anterior)
-
-// FUNCIÓN PINTAR TODAS LAS TAREAS
-
 // FUNCIÓN PINTAR TODAS LAS TAREAS
 
 function renderList(task) {
@@ -35,15 +30,7 @@ function renderList(task) {
   });
 }
 
-/*function renderList(task) {
-  list.innerHTML += `<li><input type="checkbox">${task.name}</li>`;
-} */
-
-// //BOTÓN PARA AÑADIR A LA LISTA LO QUE SE PONGA EN EL INPUT
-
-/*form.addEventListener("submit", (event) => {
-  event.preventDefault();
-}); */   //--------------------------------------> PARA BORRAR. AVISAR A INDRA
+// EVENTO AÑADIR TAREA
 
 btnAdd.addEventListener("click", (event) => {
   event.preventDefault();
@@ -52,13 +39,6 @@ btnAdd.addEventListener("click", (event) => {
   tasks.push(newTask);
   renderList(newTask);
 });
-
-// function toggleCrossed() {
-//   list.classList.toggle("completed");
-// }
-
-// checkBox.addEventListener("click", toggleCrossed);
-// console.log(toggleCrossed);
 
 //LO QUE APARECE AL CARGAR LA PÁGINA
 
