@@ -23,18 +23,19 @@
     <!-- Formulario para filtrar tareas -->
     <form id="filter-form" class="js_form">
         <label for="filter">Filtrar Tareas:</label>
-        <select id="filter" name="filter">
+        <select class="js__searchInput" id="filter" name="filter">
             <option value="all">Todas</option>
             <option value="pending">Pendientes</option>
             <option value="completed">Completadas</option>
         </select>
-        <button type="button">Filtrar</button>
+        <button type="submit" class="js__searchButton">Filtrar</button>
     </form>
 
     <!-- Lista de tareas -->
-    <ul class="ul" id="task-list">
-        <li class="js__li"></li>
+    <ul class="js__li" id="task-list">
+        <!-- Contenido de la lista se agregará dinámicamente aquí -->
     </ul>
+
 
     <script src="./js/main.js"></script>
 

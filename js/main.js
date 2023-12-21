@@ -3,6 +3,8 @@ const list = document.querySelector(".js__li");
 const btnAdd = document.querySelector(".js_btnAdd");
 const form = document.querySelector(".js_form");
 const input = document.querySelector(".js_input");
+const searchInput = document.querySelector(".js__searchInput");
+const searchButton = document.querySelector(".js__searchButton");
 
 // ARRAY DE TAREAS
 
@@ -30,6 +32,24 @@ function renderList(task) {
   });
 }
 
+// FUNCIÓN PARA FILTRAR TAREAS
+function filterTasks(filter) {
+  const filteredTasks = tasks.filter((task) => {
+    if (filter === "all") {
+      return true;
+    } else if (filter === "pending") {
+      return !task.completed;
+    } else if (filter === "completed") {
+      return task.completed;
+    }
+  });
+
+  // Limpiar la lista antes de volver a renderizar
+  list.innerHTML = "";
+
+  // Renderizar las tareas filtradas
+  filteredTasks.forEach(renderList);
+}
 // EVENTO AÑADIR TAREA
 
 btnAdd.addEventListener("click", (event) => {
@@ -38,6 +58,13 @@ btnAdd.addEventListener("click", (event) => {
   const newTask = { name: inputValue };
   tasks.push(newTask);
   renderList(newTask);
+});
+
+// EVENTO FILTRAR TAREAS
+
+searchButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  filterTasks(searchInput.value);
 });
 
 //LO QUE APARECE AL CARGAR LA PÁGINA
